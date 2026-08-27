@@ -48,3 +48,31 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+
+let personRole = "Enrolled Member";
+
+let dietaryAccess;
+
+switch (personRole) {
+    case "Employee":
+        dietaryAccess = "Authorized to access Dietary Services.";
+        break;
+
+    case "Enrolled Member":
+        dietaryAccess = "Authorized to access Dietary Services and have one-on-one interaction with a dietician.";
+        break;
+
+    case "Subscriber":
+        dietaryAccess = "Authorized to have partial access to Dietary Services.";
+        break;
+
+    case "Non-Subscriber":
+        dietaryAccess = "Please enroll or subscribe first to access Dietary Services.";
+        break;
+
+    default:
+        dietaryAccess = "Unknown role. Please contact the organization.";
+}
+
+console.log("Dietary Services Access:", dietaryAccess);
